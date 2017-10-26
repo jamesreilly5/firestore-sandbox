@@ -95,12 +95,12 @@ export default {
         ]
       },
       {
-        test: /(\.css|\.scss|\.sass)$/,
-        exclude: /node_modules/,
+        test: /(\.css|\.scss|\.sass|antd.*\.less$)$/,
+        // exclude: /node_modules/,
         use: [
           'style-loader',
           {
-            loader: 'css-loader',
+            loader: 'css-loader?importLoaders=1',
             options: {
               sourceMap: true
             }
